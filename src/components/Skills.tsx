@@ -15,15 +15,17 @@ const Skills: React.FC<SkillProps> = ({ skills }) => {
           className="mix-blend-soft-light opacity-50 absolute -right-16 z-0 "
         />
       </div>
-      <div className="flex flex-col mx-6 items-start justify-start pt-[160px] min-h-screen relative ">
-        <div className="text-[#CBB89D] my-6 tracking-widest">WHAT I DO</div>
+      <div className="flex flex-col mx-6 items-start justify-start pt-[160px] min-h-screen relative md:mx-10 xl:mx-20 2xl:mx-48 3xl:mx-96">
+        <div className="text-[#CBB89D] my-6 tracking-widest xl:text-2xl">
+          WHAT I DO
+        </div>
         {skills.map((skill, id) => (
           <div
             key={id}
-            className="text-[51px] text-start text-[#CBB89D] uppercase"
+            className="text-[51px] text-start text-[#CBB89D] uppercase md:text-8xl xl:text-[12rem] xl:font-bold"
           >
             {skill}
-            <div className="border w-screen -mx-6 border-[#806044] opacity-30"></div>
+            <div className="border w-screen -mx-6 border-[#806044] opacity-30 md:-mx-16 xl:-mx-48 "></div>
           </div>
         ))}
         <div>

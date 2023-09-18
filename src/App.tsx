@@ -50,27 +50,29 @@ const history = [
 const caseStudy = [
   {
     title: "Security Bank",
-    link: "",
+    link: "https://www.behance.net/gallery/180012731/Case-Study-Product-Lifecycle-Management",
   },
   {
     title: "Temasek Polytech",
-    link: "",
+    link: "https://www.behance.net/gallery/180063519/Case-Study-Internship-Schedule-Manager",
   },
   {
     title: "Red Cross",
-    link: "",
+    link: "https://www.behance.net/gallery/180067617/Case-Study-Red-Cross-Volunteering-(COVID19-crisis)",
   },
   {
     title: "Reed Wellbeing",
-    link: "",
+    link: "https://www.behance.net/gallery/180078983/Reed-Wellbeing-Custom-CRM",
   },
 ];
 
 function App() {
+  console.log(window.innerWidth);
+
   return (
-    <div className="bg-[#412f26] ">
+    <div className="bg-[#1a1513]">
       <NavBar
-        logo={"/HT-logo.webp"}
+        logo={"/logo.webp"}
         menu={[
           { name: "ABOUT", link: "" },
           { name: "WORK", link: "" },
