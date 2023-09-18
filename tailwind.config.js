@@ -19,5 +19,5 @@ export default {
       safelist: ["justify-between"],
     },
   },
-  plugins: ["tailwindcss-animate"],
+  plugins: [],
 };

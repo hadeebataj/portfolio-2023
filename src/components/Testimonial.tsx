@@ -5,6 +5,7 @@ const Testimonial: React.FC = () => {
   const [activeSection, setActiveSection] = useState("");
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isImageComponentVisible, setIsImageComponentVisible] = useState(false);
+  console.log(isImageComponentVisible);
 
   const handleScroll = () => {
     const section1 = document.getElementById("section1");
@@ -13,6 +14,7 @@ const Testimonial: React.FC = () => {
 
     const currentScrollPosition = window.scrollY + window.innerHeight;
     setScrollPosition(window.scrollY);
+    console.log(isImageComponentVisible);
 
     if (section1 && section1.offsetTop < currentScrollPosition)
       setActiveSection("Section 1");
@@ -23,8 +25,10 @@ const Testimonial: React.FC = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    if (!isImageComponentVisible) {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
   }, []);
 
   const section3Offset = document.getElementById("section-start-3")?.offsetTop;
@@ -33,18 +37,22 @@ const Testimonial: React.FC = () => {
 
   const section1OffsetFix = section1Offset - window.innerHeight + 500;
 
+  console.log(isImageComponentVisible);
+
   useEffect(() => {
-    setIsImageComponentVisible(false);
-    if (
-      scrollPosition > section3Offset! ||
-      scrollPosition < section1OffsetFix
-    ) {
-      setIsImageComponentVisible(false);
-    } else if (
-      scrollPosition < section3Offset! ||
-      scrollPosition > section1OffsetFix
-    )
-      setIsImageComponentVisible(true);
+    if (scrollPosition !== 0) {
+      if (
+        scrollPosition > section3Offset! ||
+        scrollPosition < section1OffsetFix
+      ) {
+        setIsImageComponentVisible(false);
+      } else if (
+        scrollPosition < section3Offset! ||
+        scrollPosition > section1OffsetFix
+      ) {
+        setIsImageComponentVisible(true);
+      }
+    }
   }, [scrollPosition]);
 
   return (
