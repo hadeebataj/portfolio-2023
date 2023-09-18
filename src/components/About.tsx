@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 
 const About: React.FC = () => {
-  const [screenWidth, setScreenWidth] = useState(0);
+  // const [screenWidth, setScreenWidth] = useState(0);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-  });
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setScreenWidth(window.innerWidth);
+  //   };
+  //   window.addEventListener("resize", handleResize);
+  // });
 
   return (
-    <div className="flex flex-col mx-6 items-start justify-start pt-[160px] min-h-screen md:mx-10 xl:mx-20 2xl:mx-48 3xl:mx-96">
+    <div className="flex flex-col mx-6 items-start justify-start pt-[160px] min-h-screen md:mx-10 lg:mx-20 xl:mx-30 2xl:mx-48 3xl:mx-96">
       <div className="text-[#CBB89D] my-6 tracking-widest xl:text-2xl">
         ABOUT ME
       </div>
@@ -22,7 +22,7 @@ const About: React.FC = () => {
         intricate challenges into user-friendly solutions as a frontend
         enthusiast.
       </div>
-      <img
+      {/* <img
         src="/mouse-bg.png"
         width={
           screenWidth < 640 ? "300px" : screenWidth < 1024 ? "420px" : "620px"
@@ -31,7 +31,7 @@ const About: React.FC = () => {
           screenWidth < 640 ? "300px" : screenWidth < 1024 ? "420px" : "620px"
         }
         className="mix-blend-soft-light opacity-50 absolute -right-20 z-0 -bottom-1/2 md:-right-36 xl:-right-44 "
-      />
+      /> */}
     </div>
   );
 };

@@ -21,7 +21,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ caseStudy }) => {
             className="text-[51px] text-start text-[#CBB89D] uppercase  hover:text-[#6A6F4C] transition-colors duration-700 cursor-pointer md:text-6xl xl:text-[8rem] xl:font-bold"
           >
             {item.title}
-            <div className="border w-screen -mx-6 border-[#806044] opacity-30 md:-mx-16 2xl:-mx-96 "></div>
+            <div className="border w-screen -mx-6 border-[#806044] opacity-30 md:-mx-16 lg:-mx-24 2xl:-mx-96 "></div>
           </a>
         ))}
       </div>
