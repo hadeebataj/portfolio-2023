@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import TestimonialImages from "./TestimonialImages";
 
 const Testimonial: React.FC = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -28,23 +29,27 @@ const Testimonial: React.FC = () => {
 
   const section3Offset = document.getElementById("section-start-3")?.offsetTop;
   const section1Offset =
-    document.getElementById("section-start-1")!.offsetTop -
-    window.innerHeight +
-    500;
+    document.getElementById("section-start-1")?.offsetTop || 0;
+
+  const section1OffsetFix = section1Offset - window.innerHeight + 500;
 
   useEffect(() => {
-    if (scrollPosition > section3Offset! || scrollPosition < section1Offset) {
+    setIsImageComponentVisible(false);
+    if (
+      scrollPosition > section3Offset! ||
+      scrollPosition < section1OffsetFix
+    ) {
       setIsImageComponentVisible(false);
     } else if (
       scrollPosition < section3Offset! ||
-      scrollPosition > section1Offset
+      scrollPosition > section1OffsetFix
     )
       setIsImageComponentVisible(true);
   }, [scrollPosition]);
 
   return (
     <div>
-      <div className="flex flex-col mx-6 items-start justify-start   aboslute md:mx-10 xl:mx-20 2xl:mx-48 3xl:mx-96">
+      <div className="flex flex-col mx-6 items-start justify-start   aboslute md:mx-12 xl:mx-20 2xl:mx-48 3xl:mx-96">
         <div className="text-[#CBB89D] my-6 tracking-widest xl:text-2xl">
           WHAT THEY SAID
         </div>
@@ -133,82 +138,11 @@ const Testimonial: React.FC = () => {
           </div>
 
           <div
-            className={`inset-y-1/3 flex flex-col  gap-4 right-4 sm:right-8 md:right-44 lg:right-36 fixed ${
+            className={`inset-y-1/3 right-4 sm:right-8 md:right-28 lg:right-36 xl:right-44 2xl:right-56 3xl:right-96 fixed ${
               isImageComponentVisible ? "opacity-100" : "opacity-0"
             } `}
           >
-            <div className="flex flex-row align-middle gap-4 ">
-              <img
-                src="/arrow.svg"
-                height={18}
-                width={18}
-                className="transition ease-linear delay-75"
-                style={
-                  activeSection === "Section 1"
-                    ? { opacity: "100%" }
-                    : { opacity: "0%" }
-                }
-              />
-              <img
-                src="/fahad-img.png"
-                height={240}
-                width={240}
-                className="transition ease-linear delay-75 right-0 h-[72px] w-[72px] md:h-[92px] md:w-[92px] lg:h-[112px] lg:w-[112px] 2xl:h-[142px] 2xl:w-[142px]"
-                style={
-                  activeSection === "Section 1"
-                    ? { opacity: "100%" }
-                    : { opacity: "30%" }
-                }
-              />
-            </div>
-            <div className="flex flex-row align-middle gap-4 ">
-              <img
-                src="/arrow.svg"
-                height={18}
-                width={18}
-                className="transition ease-linear delay-75"
-                style={
-                  activeSection === "Section 2"
-                    ? { opacity: "100%" }
-                    : { opacity: "0%" }
-                }
-              />
-              <img
-                src="/asela-img.png"
-                height={240}
-                width={240}
-                className="transition ease-linear delay-75 right-0 h-[72px] w-[72px] md:h-[92px] md:w-[92px] lg:h-[112px] lg:w-[112px] 2xl:h-[142px] 2xl:w-[142px]"
-                style={
-                  activeSection === "Section 2"
-                    ? { opacity: "100%" }
-                    : { opacity: "30%" }
-                }
-              />
-            </div>
-            <div className="flex flex-row align-middle gap-4 transition ease-in-out delay-500">
-              <img
-                src="/arrow.svg"
-                height={18}
-                width={18}
-                className="transition ease-linear delay-75"
-                style={
-                  activeSection === "Section 3"
-                    ? { opacity: "100%" }
-                    : { opacity: "0%" }
-                }
-              />
-              <img
-                src="/nadeem-img.png"
-                height={240}
-                width={240}
-                className="transition ease-linear delay-75 right-0 h-[72px] w-[72px] md:h-[92px] md:w-[92px] lg:h-[112px] lg:w-[112px] 2xl:h-[142px] 2xl:w-[142px]"
-                style={
-                  activeSection === "Section 3"
-                    ? { opacity: "100%" }
-                    : { opacity: "30%" }
-                }
-              />
-            </div>
+            <TestimonialImages activeSection={activeSection} />
           </div>
         </div>
       </div>

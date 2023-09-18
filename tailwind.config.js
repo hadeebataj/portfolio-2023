@@ -11,6 +11,13 @@ export default {
       "2xl": "1536px",
       "3xl": "2000px",
     },
+    purge: {
+      content: [
+        "./pages/**/*.{js,ts,jsx,tsx}",
+        "./components/**/*.{js,ts,jsx,tsx}",
+      ],
+      safelist: ["justify-between"],
+    },
   },
-  plugins: [],
+  plugins: ["tailwindcss-animate"],
 };

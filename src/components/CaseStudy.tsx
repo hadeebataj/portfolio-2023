@@ -10,7 +10,7 @@ type CaseStudyProps = {
 const CaseStudy: React.FC<CaseStudyProps> = ({ caseStudy }) => {
   return (
     <div>
-      <div className="flex flex-col mx-6 items-start justify-start pt-[160px] min-h-screen relative md:mx-10 xl:mx-20 2xl:mx-48 3xl:mx-96">
+      <div className="flex flex-col mx-6 items-start justify-start pt-[160px] min-h-screen relative md:mx-12 xl:mx-20 2xl:mx-48 3xl:mx-96">
         <div className="text-[#CBB89D] my-6 tracking-widest xl:text-2xl">
           CASE STUDY
         </div>

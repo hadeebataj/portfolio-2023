@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { RefObject, useEffect, useState } from "react";
 
 type NavBarProps = {
   logo: string;
   menu: {
     name?: string;
-    link?: string;
+    ref: RefObject<HTMLInputElement>;
   }[];
 };
 
@@ -18,9 +18,15 @@ const NavBar: React.FC<NavBarProps> = ({ logo, menu }) => {
     window.addEventListener("resize", handleResize);
   });
 
-  console.log(screenWidth);
+  const scrollToComponent = (ref: RefObject<HTMLInputElement>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="flex flex-row justify-between items-start mx-6 my-6 sticky top-5 z-50">
+    <div
+      className="flex  flex-row  mx-6 my-6 top-5 z-50 justify-between "
+      style={{ position: "sticky" }}
+    >
       <div>
         <img
           src={logo}
@@ -29,11 +35,15 @@ const NavBar: React.FC<NavBarProps> = ({ logo, menu }) => {
         />
       </div>
       <div>
-        <div className="flex flex-col text-[#806044]  text-[15px] sm:text-[11px] xl:text-[23px]">
+        <div className="flex flex-col text-[#806044]  text-[15px] sm:text-base xl:text-2xl">
           {menu.map((item, id) => (
-            <a key={id} href={item.link} className="hover:text-[#CBB89D]">
+            <span
+              key={id}
+              className="hover:text-[#CBB89D] cursor-pointer"
+              onClick={() => scrollToComponent(item.ref)}
+            >
               {item.name}
-            </a>
+            </span>
           ))}
         </div>
       </div>
