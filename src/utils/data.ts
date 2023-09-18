@@ -74,13 +74,16 @@ export const contactLinks = [
   {
     name: "Linkedin",
     link: "https://linkedin.com/in/hadeeba-taj/",
+    icon: "/linkedin-icon.webp",
   },
   {
     name: "Github",
     link: "https://github.com/hadeebataj",
+    icon: "/github-icon.webp",
   },
   {
     name: "Behance",
     link: "https://www.behance.net/hadeebataj",
+    icon: "/behance-icon.webp",
   },
 ];

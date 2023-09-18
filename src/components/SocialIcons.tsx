@@ -1,17 +1,22 @@
 import React from "react";
+import { contactLinks } from "../utils/data";
 
 const SocialIcons: React.FC = () => {
+  const handleClick = (link: string | URL | undefined) => {
+    return window.open(link, "_blank", "noreferrer");
+  };
+
   return (
     <div className="md:flex flex-col gap-5 fixed bottom-0 left-0 m-5 hidden md:visible">
-      <div className="w-[18px] h-[18px] hover:opacity-100 opacity-40 ">
-        <img src="/linkedin-icon.webp" width={"28px"} height={"28px"} />
-      </div>
-      <div className="w-[18px] h-[18px] hover:opacity-100 opacity-40 ">
-        <img src="/github-icon.webp" width={"28px"} height={"28px"} />
-      </div>
-      <div className="w-[18px] h-[18px] hover:opacity-100 opacity-40 ">
-        <img src="/behance-icon.webp" width={"28px"} height={"28px"} />
-      </div>
+      {contactLinks.map((item, id) => (
+        <div
+          key={id}
+          className="w-[28px] h-[28px] hover:opacity-100 opacity-40 "
+          onClick={() => handleClick(item.link)}
+        >
+          <img src={item.icon} className="w-[28px] h-[28px]" />
+        </div>
+      ))}
     </div>
   );
 };
