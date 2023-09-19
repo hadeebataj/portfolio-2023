@@ -26,7 +26,7 @@ export const history = [
   },
   {
     year: 2020,
-    title: "Frontend Developer (Freelance)",
+    title: "Frontend Developer",
     company: "Skymoon",
   },
   {
