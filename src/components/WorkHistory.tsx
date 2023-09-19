@@ -28,7 +28,7 @@ const WorkHistory: React.FC<HistoryProps> = ({ history }) => {
                 </div>
               </div>
             </div>
-            <div className="border w-[3000px] -mx-6 border-[#806044] opacity-30 md:-mx-16 lg:-mx-24 2xl:-mx-96 "></div>
+            <div className="border w-screen -mx-6 border-[#806044] opacity-30 md:-mx-16 lg:-mx-24 2xl:-mx-96 "></div>
           </div>
         ))}
       </div>

@@ -3,15 +3,6 @@
 @tailwind utilities;
 
 #root {
-  margin: 0;
-}
-
-.scroll-container {
-  overflow-y: scroll;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-}
-
-.scroll-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, and Opera */
+  margin: 0px 0px;
+  padding: 0px 0px;
 }

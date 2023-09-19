@@ -35,7 +35,7 @@ const App: React.FC = () => {
       {!isPageLoaded ? (
         <Loader />
       ) : (
-        <div className="bg-[#1a1513] scroll-container">
+        <div className="bg-[#1a1513] overflow-x-clip">
           <NavBar
             logo={"/logo.svg"}
             menu={[

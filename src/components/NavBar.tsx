@@ -23,10 +23,7 @@ const NavBar: React.FC<NavBarProps> = ({ logo, menu }) => {
   };
 
   return (
-    <div
-      className="flex  flex-row  mx-6 my-6 top-5 z-50 justify-between "
-      style={{ position: "sticky" }}
-    >
+    <div className="sticky top-0 flex items-start justify-between  flex-row  mx-6 my-6 py-5 z-50 ">
       <div>
         <img
           src={logo}
