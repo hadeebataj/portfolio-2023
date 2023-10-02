@@ -12,7 +12,7 @@ const WorkHistory: React.FC<HistoryProps> = ({ history }) => {
   return (
     <div>
       <div className="flex flex-col mx-6 items-start justify-start pt-[100px] min-h-screen relative md:mx-12  xl:mx-20 2xl:mx-48 3xl:mx-96">
-        <div className="text-[#CBB89D] my-6 tracking-widest">WORK HISTORY</div>
+        <div className="text-[#CBB89D] my-6 tracking-widest xl:text-2xl">WORK HISTORY</div>
         {history.map((item, id) => (
           <div key={id} className=" text-start text-[#CBB89D] ">
             <div className="flex flex-row items-center gap-10 my-4">
