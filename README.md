@@ -1,4 +1,4 @@
-## View the website here: !https://portfolio-2023-tau-nine.vercel.app/
+## View the website here: https://portfolio-2023-tau-nine.vercel.app/
 
 # React + TypeScript + Vite
 
