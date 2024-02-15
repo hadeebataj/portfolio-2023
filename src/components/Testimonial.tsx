@@ -11,6 +11,7 @@ const Testimonial: React.FC = () => {
     const section1 = document.getElementById("section1");
     const section2 = document.getElementById("section2");
     const section3 = document.getElementById("section3");
+    const section4 = document.getElementById("section4");
 
     const currentScrollPosition = window.scrollY + window.innerHeight;
     setScrollPosition(window.scrollY);
@@ -22,6 +23,8 @@ const Testimonial: React.FC = () => {
       setActiveSection("Section 2");
     if (section3 && section3.offsetTop < currentScrollPosition)
       setActiveSection("Section 3");
+      if (section3 && section4.offsetTop < currentScrollPosition)
+      setActiveSection("Section 4");
   };
 
   useEffect(() => {
@@ -31,7 +34,7 @@ const Testimonial: React.FC = () => {
     }
   }, []);
 
-  const section3Offset = document.getElementById("section-start-3")?.offsetTop;
+  const section4Offset = document.getElementById("section-start-4")?.offsetTop;
   const section1Offset =
     document.getElementById("section-start-1")?.offsetTop || 0;
 
@@ -42,12 +45,12 @@ const Testimonial: React.FC = () => {
   useEffect(() => {
     if (scrollPosition !== 0) {
       if (
-        scrollPosition > section3Offset! ||
+        scrollPosition > section4Offset! ||
         scrollPosition < section1OffsetFix
       ) {
         setIsImageComponentVisible(false);
       } else if (
-        scrollPosition < section3Offset! ||
+        scrollPosition < section4Offset! ||
         scrollPosition > section1OffsetFix
       ) {
         setIsImageComponentVisible(true);
@@ -139,6 +142,30 @@ const Testimonial: React.FC = () => {
                 </p>
                 <p className="text-sm text-[#806044] md:text-lg lg:text-xl xl:text-2xl">
                   Deluxe Entertainment Services
+                </p>
+              </div>
+              <div className="border w-screen -mx-6 border-[#806044] opacity-30 my-8 md:-mx-16 lg:-mx-24 2xl:-mx-96"></div>
+            </div>
+            <div className="border w-screen -mx-6 border-[#806044] opacity-30 my-8 md:-mx-16 lg:-mx-24 2xl:-mx-96"></div>
+            <div className="py-10 h-screen" id="section-start-3">
+              <div className="w-[40px] h-[40px] xl:h-[50px] xl:w-[50px] 2xl:h-[60px] 2xl:w-[60px]">
+                <img src="/quotes.svg" width={140} height={140} />
+              </div>
+              <p
+                id="section4"
+                className="text-[#CBB89D] w-60 pl-4 text-[28px] font-semibold sm:text-4xl sm:w-3/4 md:w-1/2 lg:w-3/4 md:text-4xl lg:text-6xl xl:text-7xl"
+              >
+                I must say Techstrive can solve any problem using AI and tech. They are very professional in their work and also listen to their client's feedback very attentively. The key thing that I like working with them is that they come up with latest solutions. Not only it helped in by business by solving my existing sales and marketing process activities but also they were able to enhance the productivity of my company.
+              </p>
+              <div className="mx-4 my-12 tracking-wider ">
+                <p className="text-base font-semibold text-[#EDE1D2] md:text-xl lg:text-2xl xl:text-3xl">
+                Khushi Agarwal
+                </p>
+                <p className="text-sm mt-3 text-[#806044] md:text-lg lg:text-xl xl:text-2xl">
+                Lead Visionary and CEO
+                </p>
+                <p className="text-sm text-[#806044] md:text-lg lg:text-xl xl:text-2xl">
+                B2Boutbox
                 </p>
               </div>
               <div className="border w-screen -mx-6 border-[#806044] opacity-30 my-8 md:-mx-16 lg:-mx-24 2xl:-mx-96"></div>

@@ -11,6 +11,10 @@ export const testimonials = [
     id: 3,
     image: "/nadeem-img.png",
   },
+  {
+    id: 4,
+    image: "/khushi_img.png",
+  },
 ];
 
 export const history = [
