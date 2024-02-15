@@ -23,7 +23,7 @@ const Testimonial: React.FC = () => {
       setActiveSection("Section 2");
     if (section3 && section3.offsetTop < currentScrollPosition)
       setActiveSection("Section 3");
-      if (section3 && section4.offsetTop < currentScrollPosition)
+      if (section4 && section4.offsetTop < currentScrollPosition)
       setActiveSection("Section 4");
   };
 
