@@ -153,7 +153,7 @@ const Testimonial: React.FC = () => {
               </div>
               <p
                 id="section4"
-                className="text-[#CBB89D] w-60 pl-4 text-[28px] font-semibold sm:text-4xl sm:w-3/4 md:w-1/2 lg:w-3/4 md:text-4xl lg:text-6xl xl:text-7xl"
+                className="text-[#CBB89D] w-60 pl-4 text-[18px] font-semibold sm:text-2xl sm:w-3/4 md:w-1/2 lg:w-3/4 md:text-2xl lg:text-4xl xl:text-4xl"
               >
                 I must say Techstrive can solve any problem using AI and tech. They are very professional in their work and also listen to their client's feedback very attentively. The key thing that I like working with them is that they come up with latest solutions. Not only it helped in by business by solving my existing sales and marketing process activities but also they were able to enhance the productivity of my company.
               </p>
