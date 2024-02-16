@@ -144,7 +144,6 @@ const Testimonial: React.FC = () => {
                   Deluxe Entertainment Services
                 </p>
               </div>
-              <div className="border w-screen -mx-6 border-[#806044] opacity-30 my-8 md:-mx-16 lg:-mx-24 2xl:-mx-96"></div>
             </div>
             <div className="border w-screen -mx-6 border-[#806044] opacity-30 my-8 md:-mx-16 lg:-mx-24 2xl:-mx-96"></div>
             <div className="py-10 h-screen" id="section-start-3">
@@ -155,7 +154,7 @@ const Testimonial: React.FC = () => {
                 id="section4"
                 className="text-[#CBB89D] w-60 pl-4 text-[18px] font-semibold sm:text-2xl sm:w-3/4 md:w-1/2 lg:w-3/4 md:text-2xl lg:text-4xl xl:text-4xl"
               >
-                I must say Techstrive can solve any problem using AI and tech. They are very professional in their work and also listen to their client's feedback very attentively. The key thing that I like working with them is that they come up with latest solutions. Not only it helped in by business by solving my existing sales and marketing process activities but also they were able to enhance the productivity of my company.
+                I must say Techstrive can solve any problem using AI and tech. They are very professional in their work and also listen to their client's feedback very attentively. The key thing that I like working with them is that they come up with latest solutions. Not only it helped in my business by solving my existing sales and marketing process activities but also they were able to enhance the productivity of my company.
               </p>
               <div className="mx-4 my-12 tracking-wider ">
                 <p className="text-base font-semibold text-[#EDE1D2] md:text-xl lg:text-2xl xl:text-3xl">
